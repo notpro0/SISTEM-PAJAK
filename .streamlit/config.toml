@@ -1,0 +1,5 @@
+[client]
+# Menonaktifkan navigasi multipage bawaan Streamlit yang otomatis muncul
+# karena adanya folder "pages/". Menu navigasi kita gunakan menu radio
+# kustom di sidebar (lihat utils/helper.py -> tampilkan_sidebar()).
+showSidebarNavigation = false

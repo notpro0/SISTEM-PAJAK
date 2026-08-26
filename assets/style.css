@@ -1,0 +1,369 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+
+* {
+    font-family: 'Inter', sans-serif;
+}
+
+.stApp {
+    background: #f4f7fb;
+}
+
+.block-container {
+    padding-top: 1.6rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    max-width: 1600px;
+}
+
+/* Header bawaan Streamlit (toolbar berisi tombol Deploy/menu) dibuat
+   solid dan sedikit lebih ramping (bukan default yang cukup tinggi),
+   supaya jaraknya ke konten terasa wajar seperti website pada umumnya
+   -- tidak menutupi judul, tapi juga tidak menyisakan spasi kosong
+   yang terlalu jauh. */
+header[data-testid="stHeader"] {
+    background: #f4f7fb;
+    height: 2.75rem;
+    min-height: 2.75rem;
+    display: flex;
+    align-items: center;
+    z-index: 999;
+}
+
+/* SIDEBAR */
+section[data-testid="stSidebar"] {
+    background: linear-gradient(180deg, #061b3a 0%, #082b5f 100%);
+}
+
+section[data-testid="stSidebar"] * {
+    color: white !important;
+}
+
+.sidebar-brand {
+    padding: 18px 6px 25px 6px;
+    border-bottom: 1px solid rgba(255,255,255,0.22);
+    margin-bottom: 22px;
+}
+
+.logo-row {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+}
+
+.logo-box {
+    width: 64px;
+    height: 64px;
+    background: #ffffff;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    flex-shrink: 0;
+    box-shadow: 0 0 0 2px rgba(255,255,255,0.15);
+}
+
+.logo-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.logo-text {
+    color: #061b3a !important;
+    font-size: 28px;
+    font-weight: 800;
+}
+
+.brand-title {
+    font-size: 32px;
+    font-weight: 800;
+    line-height: 1;
+}
+
+.brand-subtitle {
+    font-size: 18px;
+    margin-top: 6px;
+    color: #dbeafe !important;
+}
+
+.sidebar-section {
+    font-size: 12px;
+    font-weight: 700;
+    color: #bfdbfe !important;
+    letter-spacing: 1px;
+    margin-bottom: 10px;
+    margin-top: 12px;
+}
+
+.sidebar-info {
+    border-top: 1px solid rgba(255,255,255,0.22);
+    margin-top: 30px;
+    padding-top: 20px;
+    font-size: 14px;
+    line-height: 1.7;
+    color: #dbeafe !important;
+}
+
+/* HEADER */
+.top-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 18px;
+}
+
+.page-title {
+    font-size: 32px;
+    font-weight: 800;
+    color: #071a3d;
+}
+
+.page-subtitle {
+    color: #475569;
+    font-size: 15px;
+    margin-top: -4px;
+}
+
+.date-card {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    color: #071a3d;
+    font-weight: 700;
+}
+
+.date-icon {
+    width: 46px;
+    height: 46px;
+    border: 1px solid #cbd5e1;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #071a3d;
+    font-size: 22px;
+}
+
+/* HERO */
+.hero {
+    background: linear-gradient(90deg, rgba(6,27,58,1) 0%, rgba(9,59,130,0.92) 56%, rgba(9,59,130,0.35) 100%),
+                url('https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=1600&q=80');
+    background-size: cover;
+    background-position: center;
+    color: white;
+    padding: 34px 36px;
+    border-radius: 12px;
+    margin-bottom: 22px;
+    box-shadow: 0 10px 25px rgba(15,23,42,0.16);
+}
+
+.hero-label {
+    font-size: 18px;
+    color: #dbeafe;
+    margin-bottom: 8px;
+}
+
+.hero-title {
+    font-size: 40px;
+    font-weight: 800;
+    margin-bottom: 12px;
+}
+
+.hero-desc {
+    max-width: 720px;
+    font-size: 16px;
+    line-height: 1.7;
+    color: #eff6ff;
+}
+
+/* KPI */
+.kpi-card {
+    background: white;
+    border: 1px solid #e5e7eb;
+    border-radius: 12px;
+    padding: 22px 18px;
+    box-shadow: 0 6px 18px rgba(15,23,42,0.07);
+    min-height: 126px;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.kpi-icon {
+    width: 52px;
+    height: 52px;
+    border-radius: 50%;
+    background: #dbeafe;
+    color: #0b3c82 !important;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 800;
+    font-size: 16px;
+}
+
+.kpi-label {
+    font-size: 13px;
+    color: #475569 !important;
+    font-weight: 600;
+}
+
+.kpi-value {
+    font-size: 28px;
+    color: #071a3d !important;
+    font-weight: 800;
+    margin-top: 4px;
+}
+
+.kpi-unit {
+    font-size: 13px;
+    color: #475569 !important;
+}
+
+/* CARD */
+.card {
+    background: white;
+    border: 1px solid #e5e7eb;
+    border-radius: 12px;
+    padding: 24px;
+    box-shadow: 0 6px 18px rgba(15,23,42,0.07);
+    margin-bottom: 18px;
+}
+
+.card * {
+    color: #0f172a !important;
+}
+
+.card-title {
+    font-size: 20px;
+    font-weight: 800;
+    color: #071a3d !important;
+    margin-bottom: 18px;
+}
+
+/* Versi "card" native Streamlit (st.container(border=True)) -- dipakai
+   untuk card yang isinya widget dinamis (st.dataframe, st.pyplot, dsb).
+   Ini menggantikan pola div.card manual yang dibuka/ditutup lewat
+   st.markdown terpisah, karena pola tersebut TIDAK benar-benar
+   membungkus widget di antaranya (setiap st.markdown/st.dataframe
+   adalah elemen terpisah di Streamlit) sehingga tampilannya bisa
+   pecah/kosong. st.container(border=True) membungkus secara native
+   sehingga selalu konsisten & responsif di semua ukuran layar. */
+div[data-testid="stVerticalBlockBorderWrapper"] {
+    background: white;
+    border: 1px solid #e5e7eb !important;
+    border-radius: 12px !important;
+    box-shadow: 0 6px 18px rgba(15,23,42,0.07);
+    margin-bottom: 18px;
+}
+
+div[data-testid="stVerticalBlockBorderWrapper"] > div > div[data-testid="stVerticalBlock"] {
+    gap: 0.6rem;
+}
+
+/* FLOW */
+.flow-wrapper {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.flow-item {
+    flex: 1;
+    text-align: center;
+    position: relative;
+}
+
+.flow-number {
+    width: 34px;
+    height: 34px;
+    border-radius: 50%;
+    background: #0b63ce;
+    color: white !important;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+    font-weight: 800;
+}
+
+.flow-label {
+    font-size: 13px;
+    font-weight: 600;
+    margin-top: 10px;
+    line-height: 1.35;
+}
+
+.info-strip {
+    margin-top: 22px;
+    background: #eaf3ff;
+    border: 1px solid #bfdbfe;
+    color: #0b3c82 !important;
+    border-radius: 8px;
+    padding: 12px 15px;
+    font-size: 14px;
+}
+
+/* FEATURE */
+.feature-box {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    background: #f8fafc;
+    border: 1px solid #e5e7eb;
+    border-radius: 10px;
+    padding: 15px;
+    margin-bottom: 10px;
+}
+
+.feature-badge {
+    width: 42px;
+    height: 42px;
+    background: #0b63ce;
+    color: white !important;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 800;
+}
+
+.feature-title {
+    font-weight: 800;
+    color: #071a3d !important;
+}
+
+.feature-desc {
+    color: #475569 !important;
+    font-size: 13px;
+}
+
+/* BUTTON */
+.stButton > button,
+div[data-testid="stDownloadButton"] > button {
+    background-color: #0b3c82;
+    color: #ffffff;
+    border: none;
+    border-radius: 10px;
+    height: 46px;
+    font-weight: 800;
+}
+
+.stButton > button:hover,
+div[data-testid="stDownloadButton"] > button:hover {
+    background-color: #082b5f;
+    color: #ffffff;
+}
+
+@media (max-width: 900px) {
+    .flow-wrapper {
+        flex-direction: column;
+    }
+    .top-header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}
